@@ -9,3 +9,13 @@ d: Dump all tag info to file
 q: Quit
 
 After the program has finished executing your command it will prompt you to type a character and press enter to return to the menu.
+
+Files:
+taggerhead.h
+ - This header file contains the struct and declares the methods used in the program.
+
+tagger.cpp
+ - Source file containing the method implementations for parsing a tag text file.
+
+driver.cpp
+ - Source file implementing the main method and handling the event loop and core functionality.
