@@ -6,8 +6,8 @@
 
 int main()
 {
-    std::string command;
-    std::cout << "Enter command: ";
+    std::string command,blah;
+    std::cout << "r: Read and process tag file\np: Print all tags\nl: Lookup a tag and get info on it\nd: Dump all tag info to file\nq: Quit\nEnter an option (r,p,d,l) or q to quit, and press return...\n";
     std::cin >> command;
     std::vector<BRGMAR044::TagStruct> tags;
 
@@ -53,7 +53,9 @@ int main()
                 }
             }
         }
-        std::cout << "Enter command: ";
+        std::cout << "Press a key followed by <RETURN> to display to the menu..";
+        std::cin >> blah;
+        std::cout << "r: Read and process tag file\np: Print all tags\nl: Lookup a tag and get info on it\nd: Dump all tag info to file\nq: Quit\nEnter an option (r,p,d,l) or q to quit, and press return...\n";
         std::cin >> command;
     }
     return 0;
