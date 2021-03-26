@@ -26,8 +26,8 @@ std::vector<TagStruct> parse(std::string filename, std::vector<TagStruct> tagarr
             std::string curr_text;
             curr_tag = filestring.substr(filestring.find("<")+1, filestring.find(">")-1);
             filestring = filestring.substr(filestring.find(">")+1);
-            curr_text = filestring.substr(0,filestring.find("<"));
-            filestring = filestring.substr(filestring.find(">")+1);
+            curr_text = filestring.substr(0,filestring.find("</"));
+            filestring = filestring.substr(filestring.find(curr_tag+">")+1 + curr_tag.length());
             bool is_new = true;
             for (int i = 0; i < tagarr.size(); i++){
                 if (tagarr[i].tag_name == curr_tag){
